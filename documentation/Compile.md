@@ -52,6 +52,15 @@ And here's what it does:
 
 14. We "transmogrify" everything that needs transmogrification. :) That is, we attach tiny little assembler code fragments to each record that needs them. A little snippet of assembler code, for example, to initialize a global variable, or to push a parameter onto the stack.
 
+```
+To transmogrify a fragment (call external):
+Attach $FF15 and the fragment's entry's address to the fragment's code.
+
+To transmogrify a fragment (call internal):
+Get an address given the fragment's routine.
+Attach $E8 and the address to the fragment.
+```
+
 15. We "link" the whole shebang together into a PE-style executable in a big memory buffer. That is, we copy all those little fragments of assembler into the proper spots in the file buffer. We ignore anything that isn't used to keep the executable as small as possible. So everything in the Noodle (our standard library) gets compiled every time, but only the parts that are actually used are included in the executable.
 
 16. We write the executable buffer to disk with an appropriate name derived from the directory name where the source files are stored.
