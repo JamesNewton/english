@@ -59,3 +59,17 @@ And here's what it does:
 17. We stop the last of the timers.
 
 If the programmer selects the "List" command from the menu (instead of "Compile" or "Run") we produce a detailed listing of everything the compiler was thinking about (and generating) as it went along. You can see a piece of such a listing on page 88 of the manual, including a bunch of those assembler code fragments (in big-endian hex; or is it little-endian? I can never remember).
+
+ There are a number of "decider" routines that tell us whether a particular string is an article, or a preposition, or a conjunction, for example. Routines like this:
+
+To decide if a string is any conjunction:
+- If the string is "and", say yes.
+- If the string is "both", say yes.
+- If the string is "but", say yes.
+- If the string is "either", say yes.
+- If the string is "neither", say yes.
+- If the string is "nor", say yes.
+- If the string is "or", say yes.
+- Say no.
+
+But there are only a handful of those. The bulk of a program's vocabulary (and grammar, for that matter) is inherent in the TYPES, GLOBALS, and ROUTINE HEADERS that the programmer has coded. And those are indexed using hash tables (with linked lists for overflow) so we can the find the things we need quickly.
