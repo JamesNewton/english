@@ -33,6 +33,7 @@ Future issues include:
   Can it be packaged as an IDE plug-in?
 
 Discussions which contribute to an understanding of the language:
+- https://osmosianplainenglishprogramming.blog/
 - https://forums.parallax.com/discussion/163792/plain-english-programming/
 - http://forums.anandtech.com/showthread.php?t=2358744
 
