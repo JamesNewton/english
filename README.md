@@ -31,3 +31,8 @@ Future issues include:
 * Improving regression-test coverage.
 * The compiler can be run from the command line.
   Can it be packaged as an IDE plug-in?
+
+Discussions which contribute to an understanding of the language:
+- https://forums.parallax.com/discussion/163792/plain-english-programming/
+- http://forums.anandtech.com/showthread.php?t=2358744
+
